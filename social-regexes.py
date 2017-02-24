@@ -15,7 +15,13 @@ definitions = {
 	'ja.stackoverflow': re.compile('https?://ja\.stackexchange\.com/users/([0-9]+)/'),
 	'ru.stackoverflow': re.compile('https?://ru\.stackexchange\.com/users/([0-9]+)/'),
 	'es.stackoverflow': re.compile('https?://es\.stackexchange\.com/users/([0-9]+)/'),
-	'linkedin':  re.compile('https?://(?:(?:www|mobile|[a-z]{2})\.)?linkedin\.com/(?:(?:in/([a-zA-Z0-9_-]+))|(?:pub/([a-zA-Z0-9-]+(?:/[a-zA-Z0-9]+){3})))/?$')
+	'linkedin':  re.compile('https?://(?:(?:www|mobile|[a-z]{2})\.)?linkedin\.com/(?:(?:in/([a-zA-Z0-9_-]+))|(?:pub/([a-zA-Z0-9-]+(?:/[a-zA-Z0-9]+){3})))/?$'),
+	'instagram': re.compile('^https?://(?:www\.)?instagram\.com/([a-zA-Z0-9_]+)$'),
+	'googleplus': re.compile('^https?://plus\.google\.com/u/0/((?:\+[a-zA-Z0-9.]+)|[0-9]+)$'),
+	'pinterest': re.compile('^https?://(?:(?:www|[a-z]{2})\.)?pinterest\.com\/([a-zA-Z0-9_]+)/?$'),
+	'skype': re.compile('^skype:([a-zA-Z0-9_]+)(\?call)?$'),
+	'youtube': re.compile('^https?://(?:www\.)?youtube\.com\/user/(?:\w+/)?([a-zA-Z0-9_-]+)$'),
+	'vine': re.compile('^https?://(?:www\.)?vine\.co/(?:u/([0-9]+)|([a-zA-Z0-9._-]+))$')
 }
 
 for sub in ("meta.", "webapps.", "gaming.", "webmasters.", "cooking.", "gamedev.", "photo.", "stats.", "math.", "diy.", "gis.", "tex.", "money.", "english.", "ux.", "unix.", "wordpress.", "cstheory.", "apple.", "rpg.", "bicycles.", "softwareengineering.", "electronics.", "android.", "boardgames.", "physics.", "homebrew.", "security.", "writers.", "video.", "graphicdesign.", "dba.", "scifi.", "codereview.", "codegolf.", "quant.", "pm.", "skeptics.", "fitness.", "drupal.", "mechanics.", "parenting.", "sharepoint.", "music.", "sqa.", "judaism.", "german.", "japanese.", "philosophy.", "gardening.", "travel.", "productivity.", "crypto.", "dsp.", "french.", "christianity.", "bitcoin.", "linguistics.", "hermeneutics.", "history.", "bricks.", "spanish.", "scicomp.", "movies.", "chinese.", "biology.", "poker.", "mathematica.", "cogsci.", "outdoors.", "martialarts.", "sports.", "academia.", "cs.", "workplace.", "windowsphone.", "chemistry.", "chess.", "raspberrypi.", "russian.", "islam.", "salesforce.", "patents.", "genealogy.", "robotics.", "expressionengine.", "politics.", "anime.", "magento.", "ell.", "sustainability.", "tridion.", "reverseengineering.", "networkengineering.", "opendata.", "freelancing.", "blender.", "space.", "sound.", "astronomy.", "tor.", "pets.", "ham.", "italian.", "aviation.", "ebooks.", "alcohol.", "softwarerecs.", "arduino.", "expatriates.", "matheducators.", "earthscience.", "joomla.", "datascience.", "puzzling.", "craftcms.", "buddhism.", "hinduism.", "communitybuilding.", "startups.", "worldbuilding.", "emacs.", "hsm.", "economics.", "lifehacks.", "engineering.", "coffee.", "vi.", "musicfans.", "woodworking.", "civicrm.", "health.", "rus.", "mythology.", "law.", "opensource.", "elementaryos.", "portuguese.", "computergraphics.", "hardwarerecs.", "3dprinting.", "ethereum.", "latin.", "languagelearning.", "retrocomputing.", "crafts.", "korean.", "monero.", "ai.", "esperanto.", "sitecore.", "iot.", "literature.", "vegetarianism."):
@@ -57,6 +63,11 @@ test_data = (
 	"http://meta.stackexchange.com/users/244513/glefait",
 	"https://www.linkedin.com/in/glefait/",
 	"https://www.linkedin.com/pub/chiheb-esseghaier/46/604/314",
+	"https://plus.google.com/u/0/+guillemlefait",
+	"https://plus.google.com/u/0/116882192944905398376",
+	"https://vine.co/LoganPaul",
+	"https://vine.co/u/940474327508377600",
+	"https://fr.pinterest.com/diceverywhere/",
 )
 
 for test in test_data:
