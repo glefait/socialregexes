@@ -1,2 +1,2 @@
 # social-regexes
-Given html, returns identified social accounts 
+Given input, returns identified social network with corresponding user id
