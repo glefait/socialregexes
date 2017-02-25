@@ -5,7 +5,7 @@ import argparse
 
 
 definitions = {
-	'email': re.compile('^([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)$'),
+	'email': re.compile('^([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-_]+\.[a-zA-Z0-9-.]+)$'),
 	'twitter': re.compile('^https?://(?:mobile\.)?twitter\.com/(?:#!/)?@?([a-zA-Z0-9_]+)$'),
 	'facebook': re.compile('^https?://(?:www\.|[a-z]{2}-[a-z]{2}\.)facebook\.com/(?:(?:profile\.php\?id=)?([0-9]+)|([a-zA-Z0-9.]+))(?:/#)?(?:\?.*)?$'),
 	'github': re.compile('https?://(?:www\.)?github.com/([a-zA-Z0-9-]+)$'),
