@@ -1,4 +1,8 @@
+#!/usr/bin/env python3
 import re
+import sys
+import argparse
+
 
 definitions = {
 	'email': re.compile('^([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)$'),
@@ -40,35 +44,45 @@ def identify(text):
 		account_match = definitions[account].search(text)
 		if account_match and (not account in filters or not filters[account].search(text)):
 			the_value = next((item for item in account_match.groups() if item is not None), None)
-			return  account, the_value
+			return account, the_value
 	return None
 
-test_data = (
-	"https://twitter.com/guillem_lefait",
-	"https://twitter.com/@guillem_lefait",
-	"https://twitter.com/#!/guillem_lefait",
-	"https://twitter.com/tos",
-	"guillem.lefait@gmail.removemeobviously.com",
-	"blabla.com/xyz",
-	"https://www.facebook.com/guillem.lefait",
-	"https://fr-fr.facebook.com/guillem.lefait",
-	"https://www.facebook.com/guillem.lefait?ref=br_rs",
-	"https://www.facebook.com/profile.php?id=654000317",
-	"https://github.com/glefait",
-	"https://github.com/search",
-	"https://github.com/pulls",
-	"https://github.com/search?utf8=✓&q=hello",
-	"http://stackoverflow.com/users/3090365/glefait",
-	"http://stackoverflow.com/users/3090365/glefait?tab",
-	"http://meta.stackexchange.com/users/244513/glefait",
-	"https://www.linkedin.com/in/glefait/",
-	"https://www.linkedin.com/pub/chiheb-esseghaier/46/604/314",
-	"https://plus.google.com/u/0/+guillemlefait",
-	"https://plus.google.com/u/0/116882192944905398376",
-	"https://vine.co/LoganPaul",
-	"https://vine.co/u/940474327508377600",
-	"https://fr.pinterest.com/diceverywhere/",
-)
 
-for test in test_data:
-	print(test, identify(test))
+# test_data = (
+# 	"https://twitter.com/guillem_lefait",
+# 	"https://twitter.com/@guillem_lefait",
+# 	"https://twitter.com/#!/guillem_lefait",
+# 	"https://twitter.com/tos",
+# 	"guillem.lefait@gmail.removemeobviously.com",
+# 	"blabla.com/xyz",
+# 	"https://www.facebook.com/guillem.lefait",
+# 	"https://fr-fr.facebook.com/guillem.lefait",
+# 	"https://www.facebook.com/guillem.lefait?ref=br_rs",
+# 	"https://www.facebook.com/profile.php?id=654000317",
+# 	"https://github.com/glefait",
+# 	"https://github.com/search",
+# 	"https://github.com/pulls",
+# 	"https://github.com/search?utf8=✓&q=hello",
+# 	"http://stackoverflow.com/users/3090365/glefait",
+# 	"http://stackoverflow.com/users/3090365/glefait?tab",
+# 	"http://meta.stackexchange.com/users/244513/glefait",
+# 	"https://www.linkedin.com/in/glefait/",
+# 	"https://www.linkedin.com/pub/chiheb-esseghaier/46/604/314",
+# 	"https://plus.google.com/u/0/+guillemlefait",
+# 	"https://plus.google.com/u/0/116882192944905398376",
+# 	"https://vine.co/LoganPaul",
+# 	"https://vine.co/u/940474327508377600",
+# 	"https://fr.pinterest.com/diceverywhere/",
+# )
+
+# for test in test_data:
+# 	print(test, identify(test))
+
+if __name__ == '__main__':
+
+	parser = argparse.ArgumentParser()
+	parser.add_argument('url', help='print the social network and the user account identified on this/theses urls', nargs='+')
+	args = parser.parse_args()
+
+	for url in args.url:
+		print(identify(url))
