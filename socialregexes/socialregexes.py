@@ -47,37 +47,6 @@ def identify(text):
 			return account, the_value
 	return None
 
-
-# test_data = (
-# 	"https://twitter.com/guillem_lefait",
-# 	"https://twitter.com/@guillem_lefait",
-# 	"https://twitter.com/#!/guillem_lefait",
-# 	"https://twitter.com/tos",
-# 	"guillem.lefait@gmail.removemeobviously.com",
-# 	"blabla.com/xyz",
-# 	"https://www.facebook.com/guillem.lefait",
-# 	"https://fr-fr.facebook.com/guillem.lefait",
-# 	"https://www.facebook.com/guillem.lefait?ref=br_rs",
-# 	"https://www.facebook.com/profile.php?id=654000317",
-# 	"https://github.com/glefait",
-# 	"https://github.com/search",
-# 	"https://github.com/pulls",
-# 	"https://github.com/search?utf8=✓&q=hello",
-# 	"http://stackoverflow.com/users/3090365/glefait",
-# 	"http://stackoverflow.com/users/3090365/glefait?tab",
-# 	"http://meta.stackexchange.com/users/244513/glefait",
-# 	"https://www.linkedin.com/in/glefait/",
-# 	"https://www.linkedin.com/pub/chiheb-esseghaier/46/604/314",
-# 	"https://plus.google.com/u/0/+guillemlefait",
-# 	"https://plus.google.com/u/0/116882192944905398376",
-# 	"https://vine.co/LoganPaul",
-# 	"https://vine.co/u/940474327508377600",
-# 	"https://fr.pinterest.com/diceverywhere/",
-# )
-
-# for test in test_data:
-# 	print(test, identify(test))
-
 if __name__ == '__main__':
 
 	parser = argparse.ArgumentParser()
