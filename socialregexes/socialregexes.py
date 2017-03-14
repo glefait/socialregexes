@@ -22,7 +22,7 @@ definitions = {
 	'linkedin':  re.compile('^https?://(?:(?:www|mobile|[a-z]{2})\.)?linkedin\.com/(?:(?:in/([a-zA-Z0-9_-]+))|(?:pub/([a-zA-Z0-9-]+(?:/[a-zA-Z0-9]+){3}))|profile/view\?id=([0-9]+))[/&]?$'),
 	'instagram': re.compile('^https?://(?:www\.)?instagram\.com/([a-zA-Z0-9_]+)$'),
 	'googleplus': re.compile('^https?://(?:plus\.google\.com/(?:([0-9]+)|(?:u/0/)?((?:\+[a-zA-Z0-9.]+)|[0-9]+))|(?:www\.)?google.com/profiles/([a-zA-Z0-9.]+)|profiles\.google\.com/([a-zA-Z0-9.]+)|(?:www\.)?google\.com/[+]([a-zA-Z0-9.]+))(?:/(?:about)?)?$'),
-	'pinterest': re.compile('^https?://(?:(?:www|[a-z]{2})\.)?pinterest\.com\/([a-zA-Z0-9_]+)/?$'),
+	'pinterest': re.compile('^https?://(?:(?:www|[a-z]{2})\.)?pinterest\.com/([a-zA-Z0-9_]+)/?$'),
 	'skype': re.compile('^skype:([a-zA-Z0-9_]+)(\?call)?$'),
 	'youtube': re.compile('^https?://(?:www\.)?youtube\.com\/user/(?:\w+/)?([a-zA-Z0-9_-]+)$'),
 	'vine': re.compile('^https?://(?:www\.)?vine\.co/(?:u/([0-9]+)|([a-zA-Z0-9._-]+))$'),
@@ -61,6 +61,9 @@ definitions = {
 	'launchpad': re.compile('^https?://launchpad\.net/~([^/]+)$'),
 	'android': re.compile('^https?://market\.android\.com/developer\?pub=([^/]+)$'),
 	'ycombinator': re.compile('^https?://news\.ycombinator\.com/user\?id=([^/]+)$'),
+
+	'pinboard': re.compile('^https?://pinboard\.in/u:([^/]+)$'),
+	#paypal': re.compile('^https?:// ([]+)'),
 	#paypal': re.compile('^https?:// ([]+)'),
 }
 
