@@ -6,6 +6,7 @@ import argparse
 
 definitions = {
 	'email': re.compile('^(?:mailto:)?([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-_]+\.[a-zA-Z0-9-.]+)$'),
+	'phone': re.compile('^(?:tel|phone|mobile):(\+?[0-9. -]+)$'),
 	'twitter': re.compile('^https?://(?:(?:www|mobile)\.)?twitter\.com/(?:#!/)?@?([a-zA-Z0-9_]+)/?$'),
 	'facebook': re.compile('^https?://(?:www\.|[a-z]{2}-[a-z]{2}\.)?facebook\.com/(?:(?:profile\.php\?id=)?([0-9]+)|([a-zA-Z0-9.]+))(?:/#)?(?:\?.*)?$'),
 	'github': re.compile('https?://(?:www\.)?github.com/([a-zA-Z0-9-]+)/?$'),
@@ -63,6 +64,10 @@ definitions = {
 	'ycombinator': re.compile('^https?://news\.ycombinator\.com/user\?id=([^/]+)$'),
 
 	'pinboard': re.compile('^https?://pinboard\.in/u:([^/]+)$'),
+
+	'feedburner': re.compile('^https?://feeds\.feedburner\.com/([a-zA-Z0-9]+)$'),
+	'blogger': re.compile('^https?://www\.blogger\.com/profile/([0-9]+)$'),
+	'slideshare': re.compile('^https?://www\.slideshare\.net/([^/]+)$'),
 	#paypal': re.compile('^https?:// ([]+)'),
 	#paypal': re.compile('^https?:// ([]+)'),
 }
