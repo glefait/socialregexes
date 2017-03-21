@@ -76,8 +76,8 @@ for sub in ("meta.", "webapps.", "gaming.", "webmasters.", "cooking.", "gamedev.
 	definitions[sub + "stackexchange"] = re.compile('https?://'+sub+'stackexchange.com/users/([0-9]+)/')
 
 filters = {
-	'twitter': re.compile('twitter.com/(?:tos|about)$'),
-	'facebook': re.compile('facebook.com/(?:intl|help|policies|profile/|find-friend|privacy|campaign|page|bookmark|groups|settings|messages|permalink)'),
+	'twitter': re.compile('twitter.com/(?:tos|about|share)$'),
+	'facebook': re.compile('facebook.com/(?:intl|help|policies|profile/|find-friend|privacy|campaign|page|bookmark|groups|settings|messages|permalink|share)'),
 	'github': re.compile('github.com/(?:pulls|issues|blog|new|watching|site|security|contact|about|explore|integrations|settings|notifications|search(?:\?.*)?)$'),
 
 }
